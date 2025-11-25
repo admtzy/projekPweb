@@ -1,0 +1,52 @@
+  .bg-sawah-full {
+            background-image: url("{{ asset('images/background.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container-custom {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .farmer-icon {
+            max-width: 140px;
+            height: auto;
+            margin: 0 15px;
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+        }
+
+        .bg-sawah {
+            background-color: #38761d !important; 
+        }
+
+        .text-padi {
+            color: #fff3cd; 
+        }
+
+        .form-container-custom {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        footer {
+            background-color: #e6f3e6; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 45px; 
+        }
