@@ -6,13 +6,12 @@
 <a href="{{ route('tanamans.create') }}" class="btn btn-success mb-3">Tambah Tanaman</a>
 
 <table class="table table-bordered">
-    <thead><tr><th>Nama</th><th>Jenis Tanah</th><th>pH</th><th>Suhu</th><th>Aksi</th></tr></thead>
+    <thead><tr><th>Nama</th><th>Jenis Tanah</th><th>Suhu</th><th>Aksi</th></tr></thead>
     <tbody>
         @foreach($tanamans as $t)
         <tr>
             <td>{{ $t->nama_tanaman }}</td>
             <td>{{ $t->jenis_tanah }}</td>
-            <td>{{ $t->ph_min }} - {{ $t->ph_max }}</td>
             <td>{{ $t->suhu_min }} - {{ $t->suhu_max }}</td>
             <td>
                 <a href="{{ route('tanamans.edit', $t->id) }}" class="btn btn-sm btn-primary">Edit</a>

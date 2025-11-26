@@ -65,17 +65,6 @@
                            value="{{ old('curah_hujan_max') }}" required>
                 </div>
 
-                <div class="mb-3">
-                    <label>pH Min</label>
-                    <input type="number" step="0.1" name="ph_min" class="form-control"
-                           value="{{ old('ph_min') }}" required>
-                </div>
-
-                <div class="mb-3">
-                    <label>pH Max</label>
-                    <input type="number" step="0.1" name="ph_max" class="form-control"
-                           value="{{ old('ph_max') }}" required>
-                </div>
 
                 <div class="d-flex justify-content-end">
                     <a href="{{ route('tanamans.index') }}" class="btn btn-secondary me-2">Kembali</a>

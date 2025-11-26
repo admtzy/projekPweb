@@ -48,16 +48,7 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label>pH Min</label>
-                        <input type="number" step="0.1" name="ph_min" class="form-control" value="{{ old('ph_min', $tanaman->ph_min) }}" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label>pH Max</label>
-                        <input type="number" step="0.1" name="ph_max" class="form-control" value="{{ old('ph_max', $tanaman->ph_max) }}" required>
-                    </div>
-                </div>
+
 
                 <div class="d-flex justify-content-end">
                     <a href="{{ route('tanamans.index') }}" class="btn btn-secondary me-2">Batal</a>

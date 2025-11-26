@@ -26,8 +26,7 @@ class TanamanController extends Controller
             'suhu_max'=>'required|numeric',
             'curah_hujan_min'=>'required|numeric',
             'curah_hujan_max'=>'required|numeric',
-            'ph_min'=>'required|numeric',
-            'ph_max'=>'required|numeric',
+
         ]);
         Tanaman::create($request->all());
         return redirect()->route('tanamans.index')->with('success','Tanaman ditambahkan');
