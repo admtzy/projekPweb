@@ -14,34 +14,120 @@ class CuacaSeeder extends Seeder
      */
     public function run(): void
     {
-        $daerahs = ['Jawa Timur', 'Jawa Barat', 'Jawa Tengah', 'Bali', 'Sumatera Utara'];
-        $kabupatens = [
-            'Jember','Banyuwangi','Malang','Surabaya','Bandung','Bekasi','Solo','Denpasar','Medan','Palembang'
+        $cuacas = [
+            [
+                'provinsi' => 'Jawa Timur',
+                'kabupaten' => 'Surabaya',
+                'bulan' => 'Januari',
+                'suhu' => 32,
+                'curah_hujan' => 50,
+                'kelembapan' => 70,
+                'musim' => 'Kemarau',
+            ],
+            [
+                'provinsi' => 'Jawa Timur',
+                'kabupaten' => 'Surabaya',
+                'bulan' => 'Februari',
+                'suhu' => 33,
+                'curah_hujan' => 40,
+                'kelembapan' => 68,
+                'musim' => 'Kemarau',
+            ],
+            [
+                'provinsi' => 'Jawa Barat',
+                'kabupaten' => 'Bandung',
+                'bulan' => 'Januari',
+                'suhu' => 25,
+                'curah_hujan' => 120,
+                'kelembapan' => 80,
+                'musim' => 'Hujan',
+            ],
+            [
+                'provinsi' => 'Jawa Barat',
+                'kabupaten' => 'Bandung',
+                'bulan' => 'Maret',
+                'suhu' => 27,
+                'curah_hujan' => 100,
+                'kelembapan' => 75,
+                'musim' => 'Hujan',
+            ],
+            [
+                'provinsi' => 'Sumatera Selatan',
+                'kabupaten' => 'Palembang',
+                'bulan' => 'Agustus',
+                'suhu' => 30,
+                'curah_hujan' => 180,
+                'kelembapan' => 78,
+                'musim' => 'Hujan',
+            ],
+            [
+                'provinsi' => 'Sumatera Selatan',
+                'kabupaten' => 'Palembang',
+                'bulan' => 'September',
+                'suhu' => 31,
+                'curah_hujan' => 150,
+                'kelembapan' => 75,
+                'musim' => 'Hujan',
+            ],
+            [
+                'provinsi' => 'DKI Jakarta',
+                'kabupaten' => 'Jakarta Selatan',
+                'bulan' => 'Juni',
+                'suhu' => 29,
+                'curah_hujan' => 90,
+                'kelembapan' => 70,
+                'musim' => 'Kemarau',
+            ],
+            [
+                'provinsi' => 'DKI Jakarta',
+                'kabupaten' => 'Jakarta Selatan',
+                'bulan' => 'Juli',
+                'suhu' => 30,
+                'curah_hujan' => 100,
+                'kelembapan' => 72,
+                'musim' => 'Kemarau',
+            ],
+            [
+                'provinsi' => 'Bali',
+                'kabupaten' => 'Denpasar',
+                'bulan' => 'Mei',
+                'suhu' => 28,
+                'curah_hujan' => 80,
+                'kelembapan' => 68,
+                'musim' => 'Kemarau',
+            ],
+            [
+                'provinsi' => 'Bali',
+                'kabupaten' => 'Denpasar',
+                'bulan' => 'Juni',
+                'suhu' => 29,
+                'curah_hujan' => 75,
+                'kelembapan' => 70,
+                'musim' => 'Kemarau',
+            ],
+            [
+                'provinsi' => 'Jawa Timur',
+                'kabupaten' => 'Jember',
+                'bulan' => 'Januari',
+                'suhu' => 32,
+                'curah_hujan' => 50,
+                'kelembapan' => 70,
+                'musim' => 'Kemarau',
+            ],
+            [
+                'provinsi' => 'Jawa Timur',
+                'kabupaten' => 'Jember',
+                'bulan' => 'Februari',
+                'suhu' => 30,
+                'curah_hujan' => 59,
+                'kelembapan' => 80,
+                'musim' => 'Hujan',
+            ],
         ];
-        $bulans = [
-            'Januari','Februari','Maret','April','Mei','Juni',
-            'Juli','Agustus','September','Oktober','November','Desember'
-        ];
-        $musims = ['Hujan', 'Kemarau'];
 
-        for ($i = 0; $i < 100; $i++) {
-            $daerah = $daerahs[array_rand($daerahs)];
-            $kabupaten = $kabupatens[array_rand($kabupatens)];
-            $bulan = $bulans[array_rand($bulans)];
-            $suhu = rand(22, 35); 
-            $curah_hujan = rand(50, 300); 
-            $kelembapan = rand(60, 90); 
-            $musim = $musims[array_rand($musims)];
 
-            Cuaca::create([
-                'daerah' => $daerah,
-                'kabupaten' => $kabupaten,
-                'bulan' => $bulan,
-                'suhu' => $suhu,
-                'curah_hujan' => $curah_hujan,
-                'kelembapan' => $kelembapan,
-                'musim' => $musim,
-            ]);
+        foreach ($cuacas as $cuaca) {
+            Cuaca::create($cuaca);
         }
     }
 }

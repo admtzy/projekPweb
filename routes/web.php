@@ -43,8 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin/pupuks/{id}/status', [PupukController::class,'updateStatus'])->name('pupuk.status-admin');
 
     Route::get('/cuaca', [CuacaController::class, 'index'])->name('cuaca.index');
-    Route::get('/sync-cuaca', [CuacaController::class, 'fetchCuaca'])->name('cuaca.sync');
-
+    Route::get('/cuaca/sync', [CuacaController::class, 'sync'])->name('cuaca.sync');
 
     Route::resource('tanamans', TanamanController::class);
 

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cuacas', function (Blueprint $table) {
             $table->id();
-            $table->string('daerah'); 
+            $table->string('provinsi'); 
             $table->string('kabupaten'); 
             $table->string('bulan');  
             $table->float('suhu')->nullable();
