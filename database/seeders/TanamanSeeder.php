@@ -13,7 +13,7 @@ class TanamanSeeder extends Seeder
     {
          $tanamans = [
             [
-                'nama_tanaman' => 'Padi',
+                'nama_tanaman' => 'padi',
                 'jenis_tanah' => 'Liat',
                 'suhu_min' => 22,
                 'suhu_max' => 32,
@@ -21,7 +21,7 @@ class TanamanSeeder extends Seeder
                 'curah_hujan_max' => 300,
             ],
             [
-                'nama_tanaman' => 'Jagung',
+                'nama_tanaman' => 'jagung',
                 'jenis_tanah' => 'Aluvial',
                 'suhu_min' => 20,
                 'suhu_max' => 30,

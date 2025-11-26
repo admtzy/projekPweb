@@ -30,25 +30,18 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 window.onload = function() {
-    // Data dari server
     let cuacaData = {!! json_encode($cuaca) !!};
-
-    // Daftar bulan urut kalender
     const bulanUrut = [
         'Januari','Februari','Maret','April','Mei','Juni',
         'Juli','Agustus','September','Oktober','November','Desember'
     ];
-
-    // Urutkan data sesuai bulan kalender
     cuacaData.sort((a,b) => bulanUrut.indexOf(a.bulan) - bulanUrut.indexOf(b.bulan));
 
-    // Ambil array untuk chart
     const labels = cuacaData.map(item => item.bulan);
     const suhu = cuacaData.map(item => item.suhu ?? 0);
     const hujan = cuacaData.map(item => item.curah_hujan ?? 0);
     const lembap = cuacaData.map(item => item.kelembapan ?? 0);
 
-    // Buat chart
     new Chart(document.getElementById('chartCuaca'), {
         type: 'line',
         data: {
